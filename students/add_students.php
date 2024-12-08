@@ -1,5 +1,6 @@
 <?php
-include_once("connections/connection.php");
+
+include_once("../connections/connection.php");
 $con = connection();
 
 if (isset($_POST['submit'])) {
@@ -21,7 +22,7 @@ if (isset($_POST['submit'])) {
         '$birthdate', '$program', '$year_level', '$user_id', '$department_id')";
 
         if ($con->query($sql) === TRUE) {
-            header("Location: index.php"); // Redirect to index.php
+            header("Location: view_students.php"); // Redirect to index.php
             exit(); // Stop further script execution
         } else {
             echo "Error: " . $sql . "<br>" . $con->error;
