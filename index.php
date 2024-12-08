@@ -1,4 +1,13 @@
 <?php
+if (!isset($_SESSION)){
+    session_start();
+}
+
+if(isset($_SESSION['UserLogin'])){
+    echo "Welcome ".$_SESSION['UserLogin'];
+}else{
+    echo "Welcome, Guest!";
+}
 
 include_once("connections\connection.php");
 
@@ -48,8 +57,13 @@ if (!$grades) {
         <h1 class="text-center text-primary mb-4">Student Management System</h1>
         <br/>
         <br/>
-        <a href="add.php">Add New</a>
+        <?php if(isset($_SESSION['UserLogin'])){?>
+        <a href="logout.php">Logout</a>
+        <?php } else{ ?>
+             <a href="login.php">Login</a>
+        <?php } ?>
 
+        <a href="add.php">Add New</a>
         <!-- Students Table -->
         <h2 class="text-secondary mt-4">Students</h2>
         <div class="table-responsive">
