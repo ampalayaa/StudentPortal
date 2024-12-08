@@ -1,3 +1,18 @@
+<?php
+if (!isset($_SESSION)){
+    session_start();
+}
+
+if(isset($_SESSION['UserLogin'])){
+    echo "Welcome ".$_SESSION['UserLogin'];
+}else{
+    echo "Welcome, Guest!";
+}
+
+include_once("connections\connection.php");
+
+$con = connection();
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +25,13 @@
 </head>
 <body class="bg-light">
     <div class="container my-5">
-        <h1 class="text-center text-primary mb-4">Student Management System</h1>
+        <br/>
+        <br/>
+        <?php if(isset($_SESSION['UserLogin'])){?>
+        <a href="logout.php">Logout</a>
+        <?php } else{ ?>
+             <a href="login.php">Login</a>
+        <?php } ?>
 
         <div class="row">
             <!-- Students Section -->
