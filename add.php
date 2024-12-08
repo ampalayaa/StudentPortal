@@ -76,7 +76,7 @@ if (isset($_POST['submit'])) {
 
         <label>Department ID</label>
         <input type="number" name="department_id" id="department_id">
-
+        
         <label>User ID</label>
         <input type="number" name="user_id" id="user_id">
 
