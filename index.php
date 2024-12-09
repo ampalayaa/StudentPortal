@@ -12,7 +12,7 @@ if(isset($_SESSION['UserLogin'])){
 include_once("connections\connection.php");
 
 $con = connection();
-
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -58,6 +58,14 @@ $con = connection();
                 </div>
             </div>
 
+                        <!-- Enrolled Subjects -->
+            <div class="col-md-6">
+                <h2 class="text-secondary mb-3">Enrolled Subjects</h2>
+                <div class="list-group">
+                    <a href="enrolled_subjects\view_enrolled_subjects.php" class="list-group-item list-group-item-action">View All Enrolled Subjects</a>
+                </div>
+            </div>
+
             
         </div>
     </div>
@@ -66,4 +74,3 @@ $con = connection();
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-?>
