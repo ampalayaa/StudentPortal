@@ -24,11 +24,6 @@ if (isset($_POST['login'])){
         echo "No user found";
     }
 }
-
-
-
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">

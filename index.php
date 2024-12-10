@@ -38,7 +38,7 @@ $con = connection();
             <div class="col-md-6">
                 <h2 class="text-secondary mb-3">Manage Students</h2>
                 <div class="list-group">
-                    <a href="students\view_students.php" class="list-group-item list-group-item-action">View All Students</a>
+                    <a href="students\student_list.php" class="list-group-item list-group-item-action">View All Students</a>
                 </div>
             </div>
 
@@ -66,7 +66,7 @@ $con = connection();
                 </div>
             </div>
 
-            
+             
         </div>
     </div>
 

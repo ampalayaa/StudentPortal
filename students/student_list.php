@@ -47,7 +47,7 @@ if (!$grades) {
         <h1 class="text-center text-primary mb-4">Student Management System</h1>
         <br/>
         <br/>
-        <a href="add_students.php">Add New Student</a>
+        <a href="student_add.php">Add New Student</a>
 
         <!-- Students Table -->
         <h2 class="text-secondary mt-4">Students</h2>
@@ -63,6 +63,7 @@ if (!$grades) {
                         <th>Birthdate</th>
                         <th>Program</th>
                         <th>Year Level</th>
+                        <th>Action<th>
                     </tr>
                 </thead>
                 <tbody>
@@ -76,6 +77,7 @@ if (!$grades) {
                         <td><?php echo htmlspecialchars($row['birthdate']); ?></td>
                         <td><?php echo htmlspecialchars($row['program']); ?></td>
                         <td><?php echo htmlspecialchars($row['year_level']); ?></td>
+                        <td><a href="student_details.php?ID=<?php echo $row['id'];?>">View Record</a></td>
                     </tr>
                     <?php } ?>
                 </tbody>
